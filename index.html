@@ -39,13 +39,23 @@
             padding: 5px;
         }
 
-        input[type="submit"] {
-            background-color: #f00;
+        button[type="submit"] {
+            background-color: rgb(185, 26, 26);
             width: auto;
             color: #000;
             padding: 2.5%;
             border: none;
             border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #f00;
+        }
+
+        table {
+            margin: 0 auto;
+            margin-top: 5%;
         }
     </style>
 </head>
@@ -53,20 +63,40 @@
 <body>
     <h1>Parking Control System</h1>
     <form>
+
+
+        <label for="actions">Actions:</label>
+        <input type="text" id='actions' name="actions">
+
+        <label for="owner-name">Owner Name:</label>
+        <input type="text" id='owner-name' name="owner-name" >
+
+        <label for="owner-cpf">Owner CPF:</label>
+        <input type="text" id='owner-cpf' name="owner-cpf" >
+
         <label for="vehicle-name">Vehicle Name:</label>
-        <input type="text" id="vehicle-name" name="vehicle-name" required>
+        <input type="text" id='vehicle-name' name="vehicle-name">
 
         <label for="license-plate">License Plate:</label>
-        <input type="text" id="license-plate" name="license-plate" required>
+        <input type="text" id='license-plate' name="license-plate" >
 
-        <label for="owner-name">Owner's Name:</label>
-        <input type="text" id="owner-name" name="owner-name" required>
-
-        <label for="owner-cpf">Owner's CPF:</label>
-        <input type="text" id="owner-cpf" name="owner-cpf" required>
-
-        <input type="submit" value="Add customer">
+        <button type="submit" id='submit'>Add Customer</button>
     </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Check-in Time</th>
+                <th>Actions</th>
+                <th>Owner's Name</th>
+                <th>Owner's CPF</th>
+                <th>Vehicle's Name</th>
+                <th>Owner's CPF</th>
+            </tr>
+        </thead>
+        <tbody id='parking-area'></tbody>
+    </table>
+    <script src="./dist/main.js"></script>
 </body>
 
 </html>
