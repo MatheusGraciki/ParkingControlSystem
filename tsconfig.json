@@ -5,8 +5,7 @@
         "outDir": "./dist",
         "rootDir": "./src",
         "strict": true,
-        "noEmitOnError": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
     },
     "exclude": ["node_modules"]
 }
