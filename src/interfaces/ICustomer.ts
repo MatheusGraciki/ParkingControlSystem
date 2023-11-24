@@ -1,4 +1,4 @@
-import { IVehicle } from "./IVehicle";
+import { IVehicle } from "./IVehicle.js";
 
 export interface ICustomer {
     checkInTime: Date;

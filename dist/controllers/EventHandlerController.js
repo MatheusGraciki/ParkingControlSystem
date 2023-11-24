@@ -1,21 +1,16 @@
+import DomUtils from '../utils/DomUtils.js';
 import ParkingArea from '../controllers/ParkingAreaController.js';
 import Customer from '../models/CustumerModel.js';
 export default class EventHandler {
-    static handleFormSubmission(event) {
-        const form = event.target;
+    static handleFormSubmission() {
         const vehicleData = {
-            model: form.elements.namedItem('vehicle-model')
-                ?.value || '',
-            type: form.elements.namedItem('vehicle-type')
-                ?.value || '',
-            licensePlate: form.elements.namedItem('license-plate')
-                ?.value || '',
+            model: DomUtils.querySelector('#vehicle-model')?.value || '',
+            type: DomUtils.querySelector('#vehicle-type')?.value || '',
+            licensePlate: DomUtils.querySelector('#license-plate')?.value || '',
         };
         const customerData = {
-            name: form.elements.namedItem('customer-name')
-                ?.value || '',
-            cpf: form.elements.namedItem('customer-cpf')
-                ?.value || '',
+            name: DomUtils.querySelector('#customer-name')?.value || '',
+            cpf: DomUtils.querySelector('#customer-cpf')?.value || '',
             vehicle: vehicleData,
             checkInTime: new Date(),
         };

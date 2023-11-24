@@ -62,23 +62,22 @@
 
 <body>
     <h1>Parking Control System</h1>
-    <form >
+    <form>
 
+        <label for="customer-name">Owner Name:</label>
+        <input type="text" id='customer-name' name="owner-name" required >
 
-        <label for="actions">Actions:</label>
-        <input type="text" id='actions' name="actions">
+        <label for="customer-cpf">Owner CPF:</label>
+        <input type="number" id='customer-cpf' name="owner-cpf"  required>
 
-        <label for="owner-name">Owner Name:</label>
-        <input type="text" id='owner-name' name="owner-name" >
+        <label for="vehicle-model">Vehicle Name:</label>
+        <input type="text" id='vehicle-model' name="vehicle-model" required>
 
-        <label for="owner-cpf">Owner CPF:</label>
-        <input type="text" id='owner-cpf' name="owner-cpf" >
-
-        <label for="vehicle-name">Vehicle Name:</label>
-        <input type="text" id='vehicle-name' name="vehicle-name">
+        <label for="vehicle-type">Vehicle Type:</label>
+        <input type="text" id='vehicle-type' name="vehicle-type" required>
 
         <label for="license-plate">License Plate:</label>
-        <input type="text" id='license-plate' name="license-plate" >
+        <input type="text" id='license-plate' name="license-plate"  required>
 
         <button type="submit" id='submit'>Add Customer</button>
     </form  >
@@ -87,17 +86,14 @@
         <thead>
             <tr>
                 <th>Check-in Time</th>
-                <th>Actions</th>
-                <th>Owner's Name</th>
-                <th>Owner's CPF</th>
-                <th>Vehicle's Name</th>
-                <th>Owner's CPF</th>
+                <th>Customer's Name</th>
+                <th>Customer's CPF</th>
+                <th>Vehicle's Model</th>
+                <th>Vehicle's Model</th>
             </tr>
         </thead>
         <tbody id='parking-area'></tbody>
     </table>
-<!-- Corrija os caminhos dos scripts no seu HTML -->
-
 <script src="./dist/main.js" type="module" ></script>
 
 

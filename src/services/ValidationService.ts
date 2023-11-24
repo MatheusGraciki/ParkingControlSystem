@@ -1,5 +1,5 @@
 
-import { ICustomer } from '../interfaces/ICustomer';
+import { ICustomer } from '../interfaces/ICustomer.js';
 
 export class ValidationService {
     static validateClientData(custumer: ICustomer): void {

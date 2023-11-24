@@ -1,7 +1,7 @@
-import { ICustomer } from '../interfaces/ICustomer';
-import TableView from '../views/TableView';
-import ErrorGenerator from '../utils/ErrorGenerator';
-import ErrorDisplayer from '../views/ErrorDisplayer';
+import { ICustomer } from '../interfaces/ICustomer.js';
+import TableView from '../views/TableView.js';
+import ErrorGenerator from '../utils/ErrorGenerator.js';
+import ErrorDisplayer from '../views/ErrorDisplayer.js';
 
 export default class ParkingArea {
     static addCustomer(customer: ICustomer): void {

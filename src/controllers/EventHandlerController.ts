@@ -1,37 +1,23 @@
-import { ICustomer } from './../interfaces/ICustomer';
-import { IVehicle } from './../interfaces/IVehicle';
-import ParkingArea from '../controllers/ParkingAreaController';
-import Customer from '../models/CustumerModel';
+import { ICustomer } from './../interfaces/ICustomer.js';
+import { IVehicle } from './../interfaces/IVehicle.js';
+import DomUtils from '../utils/DomUtils.js';
+import ParkingArea from '../controllers/ParkingAreaController.js';
+import Customer from '../models/CustumerModel.js';
 
 export default class EventHandler {
-    static handleFormSubmission(event: Event): void {
-
-        const form = event.target as HTMLFormElement;
+    static handleFormSubmission(): void {
         const vehicleData: IVehicle = {
-            model:
-                (form.elements.namedItem('vehicle-model') as HTMLInputElement)
-                    ?.value || '',
-            type:
-                (form.elements.namedItem('vehicle-type') as HTMLInputElement)
-                    ?.value || '',
-            licensePlate:
-                (form.elements.namedItem('license-plate') as HTMLInputElement)
-                    ?.value || '',
+            model: DomUtils.querySelector('#vehicle-model')?.value || '',
+            type: DomUtils.querySelector('#vehicle-type')?.value || '',
+            licensePlate: DomUtils.querySelector('#license-plate')?.value || '',
         };
-
         const customerData: ICustomer = {
-            name:
-                (form.elements.namedItem('customer-name') as HTMLInputElement)
-                    ?.value || '',
-            cpf:
-                (form.elements.namedItem('customer-cpf') as HTMLInputElement)
-                    ?.value || '',
+            name: DomUtils.querySelector('#customer-name')?.value || '',
+            cpf: DomUtils.querySelector('#customer-cpf')?.value || '',
             vehicle: vehicleData,
             checkInTime: new Date(),
         };
-
         const customer = new Customer(customerData);
-
         ParkingArea.addCustomer(customer);
     }
 }
