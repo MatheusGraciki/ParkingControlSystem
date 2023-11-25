@@ -12,10 +12,8 @@ export default class EventHandler {
             name: DomUtils.querySelector('#customer-name')?.value || '',
             cpf: DomUtils.querySelector('#customer-cpf')?.value || '',
             vehicle: vehicleData,
-            checkInTime: new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' })
-,
+            checkInTime: new Date(),
         };
-
         const customer = new Customer(customerData);
         ParkingArea.addCustomer(customer);
     }

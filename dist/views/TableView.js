@@ -9,7 +9,7 @@ export default class TableView {
                 <td>${customer.vehicle.model}</td>
                 <td>${customer.vehicle.type}</td>
                 <td>${customer.vehicle.licensePlate}</td>
-                <td>${customer.checkInTime}</td>
+                <td>${customer.checkInTime.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', })}</td>
                 <td>
                 <button class="delete" data-license-plate="${customer.vehicle.licensePlate}">X</button>
                 </td>
