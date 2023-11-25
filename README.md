@@ -10,3 +10,10 @@ https://parking-control-system.vercel.app/
 
 - Add radio select to vehicle type
 
+## Objective
+
+The primary goal of this project was to implement:
+
+- Object-Oriented Programming (OOP)
+- class modeling principles
+- Model-View-Controller (MVC) architecture.
