@@ -16,6 +16,6 @@ https://parking-control-system.vercel.app/
 
 The primary goal of this project was to implement:
 
-- Object-Oriented Programming (OOP)
+- Object-Oriented Programming (POO)
 - class modeling principles
 - Model-View-Controller (MVC) architecture.
